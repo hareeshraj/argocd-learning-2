@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: argo-cd-learning
-          image: hareeshraj/argo-cd-learning:9d001e6e
+          image: hareeshraj/argo-cd-learning:e42ac209
           ports:
             - containerPort: 80
           resources:
