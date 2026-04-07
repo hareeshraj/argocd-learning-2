@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argo-cd-learning
+  labels:
+    app: argo-cd-learning
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: argo-cd-learning
+  template:
+    metadata:
+      labels:
+        app: argo-cd-learning
+    spec:
+      containers:
+        - name: argo-cd-learning
+          image: hareeshraj/argo-cd-learning:9d001e6e
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
+
+ 
